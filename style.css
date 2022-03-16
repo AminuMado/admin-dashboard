@@ -9,6 +9,7 @@
   --font-color: #7a6c5d;
   --bg-color: #f8f9fa;
   --heading-color: rgba(0, 0, 0, 0.3);
+  --button-color: #22333b;
   --avatar1: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/2e80bb98931623.5ee79b6a8f342.jpg);
   --avatar2: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/06fbe298931623.5ee79b6a90221.jpg);
   --avatar3: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/8394f798931623.5ee79b6a909ea.jpg);
@@ -32,7 +33,7 @@
   grid-column: 2/3;
   grid-row: 1/2;
   background-color: var(--tertiary-color);
-  padding: 25px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
 }
@@ -46,10 +47,16 @@
   display: grid;
   grid-template-columns: 1fr max-content;
   margin-bottom: 2.5rem;
+  gap: 25px;
+  align-items: center;
 }
 .search {
   display: flex;
   align-items: center;
+}
+.top label {
+  display: flex;
+  cursor: pointer;
 }
 label > .search-icon {
   font-size: 1.8rem;
@@ -75,10 +82,60 @@ label > .search-icon {
 }
 .account .picture {
   margin: 0 1rem 0 2.5rem;
-  height: 40px;
-  width: 40px;
+  height: 45px;
+  width: 45px;
 }
 .picture {
   background: var(--avatar1) center center / cover no-repeat;
   border-radius: 50%;
+}
+.account .notifications-icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+.account .notifications-icon:active {
+  transform: scale(1.1);
+}
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  margin-bottom: 2.5rem;
+  gap: 25px;
+  align-items: center;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.profile .picture {
+  height: 80px;
+  width: 80px;
+}
+.buttons {
+  display: flex;
+  gap: 30px;
+}
+.buttons button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.buttons button:active {
+  transform: scale(1.1);
+}
+.buttons button:hover {
+  background-color: var(--button-color);
+}
+.buttons .btn {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-weight: 500;
+  padding: 0.75em 2.3em;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+.profile .name {
+  font-size: 1.6rem;
+  font-weight: 800;
 }
