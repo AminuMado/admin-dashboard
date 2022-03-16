@@ -24,11 +24,14 @@
   grid-template-columns: minmax(330px, 0.8fr) minmax(730px, 3fr);
   grid-template-rows: 1fr 3fr;
 }
-.dashboard {
-  background-color: var(--secondary-color);
-  grid-column: 1;
-  grid-row: 1/3;
+
+.main {
+  background-color: var(--bg-color);
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
+
+/* ........... Header .......... */
 .header {
   grid-column: 2/3;
   grid-row: 1/2;
@@ -37,12 +40,6 @@
   display: flex;
   flex-direction: column;
 }
-.main {
-  background-color: var(--bg-color);
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-/* ........... Header .......... */
 .top {
   display: grid;
   grid-template-columns: 1fr max-content;
@@ -138,4 +135,44 @@ label > .search-icon {
 .profile .name {
   font-size: 1.6rem;
   font-weight: 800;
+}
+/* ........... Aside/Dashboard .......... */
+.dashboard {
+  background-color: var(--secondary-color);
+  grid-column: 1;
+  grid-row: 1/3;
+  padding: 2rem;
+  padding-top: 26px;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+.sidebar-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.75rem;
+  gap: 10px;
+}
+.sidebar-title .dashboard-icon {
+  font-size: 2.8rem;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav {
+  display: grid;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-link > [class^="material-icons"] {
+  font-size: 1.9em;
 }
