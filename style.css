@@ -176,3 +176,13 @@ a {
 .nav-link > [class^="material-icons"] {
   font-size: 1.9em;
 }
+.nav-item.current {
+  color: var(--bg-color);
+}
+.nav-link:hover {
+  transition: all 0.3s;
+  color: var(--bg-color);
+}
+.nav-link:active {
+  transform: scale(1.01);
+}
