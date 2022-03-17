@@ -9,7 +9,8 @@
   --font-color: #7a6c5d;
   --bg-color: #f8f9fa;
   --heading-color: rgba(0, 0, 0, 0.3);
-  --button-color: #22333b;
+  --button-color: #a9f453;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --avatar1: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/2e80bb98931623.5ee79b6a8f342.jpg);
   --avatar2: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/06fbe298931623.5ee79b6a90221.jpg);
   --avatar3: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/8394f798931623.5ee79b6a909ea.jpg);
@@ -24,12 +25,6 @@
   grid-template-columns: minmax(330px, 0.8fr) minmax(730px, 3fr);
   grid-template-rows: 1fr 3fr;
   overflow: auto;
-}
-
-.main {
-  background-color: var(--bg-color);
-  grid-column: 2/3;
-  grid-row: 2/3;
 }
 
 /* ........... Header .......... */
@@ -108,7 +103,7 @@ label > .search-icon {
 }
 .profile .picture {
   height: 80px;
-  width: 80px;
+  min-width: 80px;
 }
 .buttons {
   display: flex;
@@ -186,4 +181,56 @@ a {
 }
 .nav-link:active {
   transform: scale(1.01);
+}
+
+/* ........... Main ............ */
+.main {
+  background-color: var(--bg-color);
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: grid;
+  grid-template: 1fr 1fr / minmax(600px, 3fr) minmax(400px, 1fr);
+  overflow: auto;
+}
+.projects {
+  background-color: #21c05b;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  padding: 10px;
+}
+.projects h3 {
+  margin: 10px 0 20px 0;
+  font-size: 2rem;
+}
+.projects .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.projects .card {
+  border-left: 10px solid var(--heading-color);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+}
+.actions {
+  margin-top: auto;
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+}
+.announcements {
+  background-color: #a8dadc;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.trending {
+  background-color: lightpink;
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
