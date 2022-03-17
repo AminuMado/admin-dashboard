@@ -224,6 +224,16 @@ a {
   align-items: center;
   gap: 1.5rem;
 }
+.actions span {
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+.actions span:hover {
+  color: var(--button-color);
+}
+.actions span:active {
+  transform: scale(1.1);
+}
 .announcements {
   background-color: #a8dadc;
   grid-column: 2/3;
