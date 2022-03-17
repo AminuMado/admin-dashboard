@@ -23,6 +23,7 @@
   color: var(--font-color);
   grid-template-columns: minmax(330px, 0.8fr) minmax(730px, 3fr);
   grid-template-rows: 1fr 3fr;
+  overflow: auto;
 }
 
 .main {
