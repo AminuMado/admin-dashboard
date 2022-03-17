@@ -7,9 +7,9 @@
   --secondary-color: #2a3d45;
   --tertiary-color: #a8dadc;
   --font-color: #7a6c5d;
-  --bg-color: #f8f9fa;
+  --bg-color: #d4f1e8;
   --heading-color: rgba(0, 0, 0, 0.3);
-  --button-color: #a9f453;
+  --button-color: #88ff10;
   --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --avatar1: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/2e80bb98931623.5ee79b6a8f342.jpg);
   --avatar2: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/06fbe298931623.5ee79b6a90221.jpg);
@@ -142,6 +142,7 @@ label > .search-icon {
   display: flex;
   gap: 50px;
   flex-direction: column;
+  color: var(--bg-color);
 }
 .sidebar-title {
   display: flex;
@@ -173,11 +174,11 @@ a {
   font-size: 1.9em;
 }
 .nav-item.current {
-  color: var(--bg-color);
+  color: var(--font-color);
 }
 .nav-link:hover {
   transition: all 0.3s;
-  color: var(--bg-color);
+  color: var(--font-color);
 }
 .nav-link:active {
   transform: scale(1.01);
@@ -191,14 +192,14 @@ a {
   display: grid;
   grid-template: 1fr 1fr / minmax(600px, 3fr) minmax(400px, 1fr);
   overflow: auto;
+  padding: 20px;
 }
 .projects {
-  background-color: #21c05b;
   grid-column: 1/2;
   grid-row: 1/3;
   padding: 10px;
 }
-.projects h3 {
+.main h3 {
   margin: 10px 0 20px 0;
   font-size: 2rem;
 }
@@ -210,11 +211,11 @@ a {
   padding-bottom: 2rem;
 }
 .projects .card {
-  border-left: 10px solid var(--heading-color);
+  border-left: 10px solid var(--secondary-color);
   display: flex;
   flex-direction: column;
   gap: 5px;
-  background-color: var(--bg-color);
+  background-color: var(--tertiary-color);
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
@@ -241,18 +242,75 @@ a {
   cursor: pointer;
 }
 .actions span:hover {
-  color: var(--button-color);
+  color: var(--secondary-color);
 }
 .actions span:active {
   transform: scale(1.1);
 }
 .announcements {
-  background-color: #a8dadc;
   grid-column: 2/3;
   grid-row: 1/2;
+  margin-top: 9px;
+}
+.announcements .card {
+  background-color: var(--tertiary-color);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+}
+.announcement h5 {
+  font-size: 0.9rem;
+  margin-bottom: 0.25em;
+}
+.announcement {
+  width: 25ch;
+  padding: 1rem 0;
+}
+.announcement:first-child {
+  padding-top: 0;
+}
+.announcement p {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.announcement + .announcement {
+  border-top: var(--font-color) 1px solid;
 }
 .trending {
-  background-color: lightpink;
   grid-column: 2/3;
   grid-row: 2/3;
+}
+.trending .card {
+  padding: 1.5rem;
+  background-color: var(--tertiary-color);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.trend {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+.trend .picture {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+.trend-1 .picture {
+  background-image: var(--avatar2);
+}
+.trend-2 .picture {
+  background-image: var(--avatar3);
+}
+.trend-3 .picture {
+  background-image: var(--avatar4);
 }
